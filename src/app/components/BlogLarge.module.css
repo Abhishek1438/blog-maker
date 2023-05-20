@@ -1,0 +1,43 @@
+.container {
+  height: 700px;
+}
+
+.parent {
+  background: url('https://images.unsplash.com/photo-1683009427051-00a2fe827a2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+  position: relative;
+  height: 400px;
+}
+
+.child {
+  position: absolute;
+  top: 100px;
+  right: 20%;
+  max-width: 350px;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  color: #000;
+  text-align: start;
+}
+
+.child h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1b282c;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.child button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: #1b282c;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.child button:hover {
+  background-color: #003041;
+  color: #000000cd;
+}

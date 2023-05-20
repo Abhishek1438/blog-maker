@@ -1,0 +1,12 @@
+.blogsContainer {
+  padding-top: 6rem;
+}
+
+.smallBlogsContainer {
+  padding: 0 2rem;
+}
+
+.smallBlogsContainer h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
