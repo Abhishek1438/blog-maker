@@ -1,9 +1,8 @@
-import classes from './BlogSmall.module.css';
-import Link from 'next/link';
+import classes from './BlogDashboard.module.css';
 
-export default function ({ blog }) {
+export default function () {
   return (
-    <Link href={`blogDetails/${blog._id}`}>
+    <div className={classes.container}>
       <div className={classes.parent}>
         <div>
           <img
@@ -11,9 +10,13 @@ export default function ({ blog }) {
             alt="blog-image"
           />
         </div>
-        <p>{blog.date}</p>
-        <h3>{blog.title}</h3>
+        <p>10 Jan, 2019</p>
+        <h3>Fundament rock & material understanding for civil and mining engineers</h3>
       </div>
-    </Link>
+      <div>
+        <button>Edit</button>
+        <button>Delete</button>
+      </div>
+    </div>
   );
 }

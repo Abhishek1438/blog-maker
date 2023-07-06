@@ -5,8 +5,32 @@ import BlogLarge from '../components/BlogLarge';
 import BlogSmall from '../components/BlogSmall';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import { useEffect, useState } from 'react';
 
 export default function () {
+  const [blogsArray, setBlogsArray] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const response = await fetch('http://localhost:4000/blogs', {
+        credentials: 'include',
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setLoading(false);
+        setBlogsArray(data);
+      } else {
+        console.log(data.message);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+  console.log(blogsArray);
+
   return (
     <div className={classes.blogsContainer}>
       <div className="carousel-wrapper">
@@ -45,21 +69,21 @@ export default function () {
             );
           }}
         >
-          <div>
-            <BlogLarge />
-          </div>
-          <div>
-            <BlogLarge />
-          </div>
-          <div>
-            <BlogLarge />
-          </div>
+          {blogsArray.slice(0, 5).map((blog) => (
+            <div>
+              <BlogLarge blog={blog} />
+            </div>
+          ))}
         </Carousel>
       </div>
 
+      <h2 className={classes.blogsTitle}>Blogs</h2>
       <div className={classes.smallBlogsContainer}>
-        <h2>Blogs</h2>
-        <BlogSmall />
+        {blogsArray.map((blog) => (
+          <div>
+            <BlogSmall blog={blog} />
+          </div>
+        ))}
       </div>
     </div>
   );

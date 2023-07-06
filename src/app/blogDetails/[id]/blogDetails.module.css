@@ -82,6 +82,18 @@
   max-width: 70rem;
 }
 
+.content h1 {
+  font-size: 2rem;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+}
+
+.content p {
+  margin: 1rem 0;
+}
+
 .commentContainer {
   padding: 2rem;
   margin: 0 auto;

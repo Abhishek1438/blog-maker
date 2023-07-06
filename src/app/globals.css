@@ -25,3 +25,34 @@ body {
   bottom: 300px !important;
   display: flex;
 }
+
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  width: 90%;
+  padding-top: 8rem;
+  margin: 0 auto;
+}
+
+.dashboardContainer h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.createNew {
+  margin: 1rem auto;
+  background-color: #61dafb;
+  color: black;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+}
+
+.createNewLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

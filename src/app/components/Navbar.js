@@ -70,7 +70,9 @@ const Navbar = () => {
   return (
     <nav className={classes.nav}>
       <div className={classes.logo}>
-        <Logo />
+        <Link href="/">
+          <Logo />
+        </Link>
       </div>
       <div className={hamburgerClasses.join(' ')} onClick={hamburgerClicked}>
         <div className={classes.line1}></div>
@@ -79,13 +81,13 @@ const Navbar = () => {
       </div>
       <ul className={navLinksClasses.join(' ')}>
         <li className={linksClasses.join(' ')}>
-          <a href="#">DashBoard</a>
+          <a href="/">DashBoard</a>
         </li>
         <li className={linksClasses.join(' ')}>
-          <a href="#">Compose</a>
+          <a href="/compose">Compose</a>
         </li>
         <li className={linksClasses.join(' ')}>
-          <a href="#">Blogs</a>
+          <a href="/blogs">Blogs</a>
         </li>
         <li className={linksClasses.join(' ')}>
           <a href="/contact">Contact Me</a>

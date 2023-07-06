@@ -4,9 +4,14 @@
 
 .smallBlogsContainer {
   padding: 0 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.smallBlogsContainer h2 {
+.blogsTitle {
+  margin-left: 2rem;
   font-size: 2rem;
   font-weight: bold;
 }
